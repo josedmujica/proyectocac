@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="ptipos.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Pokémon al azar</title>
+</head>
+
+<body>
+    <div id="botonn">
+    <button id="apiButton">Pokémon al azar</button></div>
+    <br><br>
+    <!-- <pre id="apiData"></pre> -->
+    <div id="tarjeta">
+        <p id="numero">
+            #
+        </p>
+        <p id="name">
+            <!-- Nombre: -->
+        </p>
+        <!-- <p id="base_experience">
+            Experiencia Base:
+        </p> -->
+        <p id="tipos"> <!-- Tipo/s:-->
+            <span id="tipo1" class= "formatoTipo1"></span>
+            <span id="tipo2" class= "formatoTipo2"></span>
+        </p>
+        <div>
+            <img src="placeholder.png" id="imagen">
+            <p id="hoverInfo">Al pasar sobre la imagen se verá <br>su versión shiny (variocolor).</p>
+        </div>
+    </div>
+
+    <div>
+        <p>A ver cómo se ven estos estilos:</p>
+        <span class="format-bug">BICHO</span>
+        <span class="format-dark">SINIESTRO</span>
+        <span class="format-dragon">DRAGÓN</span>
+        <span class="format-electric">ELÉCTRICO</span>
+        <span class="format-fairy">HADA</span>
+        <span class="format-fighting">LUCHA</span>
+        <span class="format-fire">FUEGO</span>
+        <span class="format-flying">VOLADOR</span>
+        <span class="format-ghost">FANTASMA</span>
+        <span class="format-grass">PLANTA</span>
+        <span class="format-ground">TIERRA</span>
+        <span class="format-ice">HIELO</span>
+        <span class="format-normal">NORMAL</span>
+        <span class="format-poison">VENENO</span>
+        <span class="format-psychic">PSÍQUICO</span>
+        <span class="format-rock">ROCA</span>      
+        <span class="format-steel">ACERO</span>   
+        <span class="format-water">AGUA</span>   
+    </div>
+
+
+
+    <!-- <p>Creamos un h1 con texto:</p> -->
+    <!-- <button id="mostrarMensajito">Mostrar saludito</button> -->
+    <!-- <script>
+        const h1 = document.createElement("h1")             //Creamos el <h1>
+        const textNode = document.createTextNode("¡Hola!")  //Creamos el texto
+        h1.appendChild(textNode)                            //Colocamos el texto como hijo del <h1>
+        document.body.appendChild(h1)                       //Y ponemos el <h1> dentro del <body>
+    </script> -->
+    <!-- <div>    </div>
+    <div class="info">    </div>
+    <div class="info">    </div>
+    <div class="info">    </div>
+    <div class="info">    </div> -->
+
+    
+    <script src="pruebita.js"></script>
+</body>
+
+</html>
+
+<!-- 
+console.log(data.types[0].type.name);
+console.log(data.types[1].type.name);
+
+tipo1.innerText = `${JSON.stringify(data.types[0].type.name)}`
+tipo2.innerText = `${JSON.stringify(data.types[1].type.name)}`
+
+tipos.innerText = tipo1.innerText;
+// tipos.innerText = `Tipo/s: ${JSON.stringify(data.types[0].type.name)}`;
+    //.toUpperCase() + nombre.innerText.slice(1);
+
+// tiposApi.innerText = `Tipo/s: ${JSON.stringify(data.types.map())}`;
+// console.log(tipos.innerText); -->
