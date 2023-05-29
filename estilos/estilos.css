@@ -21,29 +21,28 @@
     --color3: #A47DFF;
     --color4: #F3A806;
     --color5: #EA9406;
+    --color6: #eae2fc;
 }
 
 /* ESTILOS GENERALES */
 * {
     font-family: var(--font-family);
 }
-/* 
-.boton, #b1,#b2,#b3,#text {
-    color: white;
-    border-radius: 3px;
-    border: 1px solid #303030;
-} */
+
+body {
+    background-color: var(--color3);
+}
+
 
 #text {
     color: #303030;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 5em;
     font-weight: bold;
-    color: #00108b;
-    border-bottom: 2px solid red;
-    background: coral;
+    color: #feffff;
+    background: var(--color2);
     margin-top: 10px;
     text-align: center;
     justify-content: center;
@@ -52,10 +51,10 @@ h1 {
 
 /* Botón al azar */
 #apiButton {
-    background-color: rgb(210, 226, 255);
+    background-color: var(--color6);
     border-radius: 5px;
     text-align: center;
-    border: 3px solid cornflowerblue;
+    border: 3px solid var(--color1);
     width: 200px;
 }
 #botonn {
@@ -75,8 +74,8 @@ h1 {
     /* justify-content: center; */
     display: none;
     width: 400px;
-    border: 5px solid cornflowerblue;
-    background-color: rgb(235, 231, 208);
+    border: 5px solid var(--color1);
+    background-color: var(--color6);
     border-radius: 20px;
     padding: 5px 15px;
 }
@@ -122,9 +121,9 @@ span {
 
 img {
     padding: 20px;
-    background-color: rgb(255, 251, 243);
+    background-color: var(--color3);
     margin: 1em 0;
-    border: 5px solid cornflowerblue;
+    border: 5px solid var(--color1);
     border-radius: 20px;
     width: 200px;
     transition: 0.4s;

@@ -8,9 +8,11 @@
     --blanco: #FFFFFF;
     --color1: #5A2AA2;
     --color2: #7331CB;
-    --color3: #A47DFF;
+    --color3: #ccb7ff;
     --color4: #F3A806;
     --color5: #EA9406;
+    --font-dark: #5e5e5e;
+    --font-light: #f9f9f9;
 }
 
 
@@ -19,6 +21,7 @@
     justify-content: center;
     vertical-align: middle;
 }
+
 
 details {
     text-align: left;
@@ -29,15 +32,16 @@ details {
 summary {
     cursor: pointer;
     outline: none;
+    margin-bottom: 10px;
 }
 
 ::marker {
-    color: var(--color1);
+    color: var(--color1); /* podría probar transparent */
 }
 
 details > p {
     padding: 0.5em 0.5em;
-    background: #F3A806;
+    background: var(--color6);
     border-radius: 5px;
 }
 
@@ -47,6 +51,11 @@ details > p {
 
 /* ACÁ VAN LOS ESTILOS QUE CORRESPONDEN A LOS COLORES DE FONDO Y LETRAS DE LOS TIPOS*/
 
+.cTipo, #tipo1, #tipo2 {
+    box-shadow: 2px 3px var(--primary-shadow);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
 .format-bug {
     background: -webkit-linear-gradient(180deg, #fdea9a 0%, #61ca1c 100%);
     background: -ms-linear-gradient(180deg, #fdea9a 0%, #61ca1c 100%);
@@ -54,7 +63,7 @@ details > p {
     background: -o-linear-gradient(180deg, #fdea9a 0%, #61ca1c 100%);
     background: linear-gradient(180deg, #fdea9a 0%, #61ca1c 100%);
     background-color: #61ca1c;
-    color: #2c2c2c
+    color: var(--font-dark)
 }
 
 .format-dark {
@@ -64,7 +73,7 @@ details > p {
     background: -o-linear-gradient(180deg, #c2c2c2 0%, #262626 100%);
     background: linear-gradient(180deg, #c2c2c2 0%, #262626 100%);
     background-color: #707070;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-dragon {
@@ -74,7 +83,7 @@ details > p {
     background: -o-linear-gradient(180deg, #6eccff 0%, #266740 100%);
     background: linear-gradient(180deg, #6eccff 0%, #266740 100%);
     background-color: #0c3b1f;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-electric {
@@ -84,7 +93,7 @@ details > p {
     background: -o-linear-gradient(180deg, #fffebc 0%, #ecd11b 100%);
     background: linear-gradient(180deg, #fffebc 0%, #ecd11b 100%);
     background-color: #eed535;
-    color: #2c2c2c
+    color: var(--font-dark)
 }
 
 .format-fairy {
@@ -94,7 +103,7 @@ details > p {
     background: -o-linear-gradient(180deg, #fff4fc 0%, #e39cce 100%);
     background: linear-gradient(180deg, #fff4fc 0%, #e39cce 100%);
     background-color: #e39cce;
-    color: #2c2c2c
+    color: var(--font-dark)
 }
 
 .format-fighting {
@@ -104,7 +113,7 @@ details > p {
     background: -o-linear-gradient(180deg, #ee7955 0%, #9a592f 100%);
     background: linear-gradient(180deg, #ee7955 0%, #9a592f 100%);
     background-color: #9a6d50;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-fire {
@@ -114,7 +123,7 @@ details > p {
     background: -o-linear-gradient(180deg, #faad41 0%, #d63e23 100%);
     background: linear-gradient(180deg, #faad41 0%, #d63e23 100%);
     background-color: #d63e23;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-flying {
@@ -124,7 +133,7 @@ details > p {
     background: -o-linear-gradient(180deg, #e5fdff 0%, #52daff 100%);
     background: linear-gradient(180deg, #e5fdff 0%, #52daff 100%);
     background-color: #1ec7f6;
-    color: #2c2c2c
+    color: var(--font-dark)
 }
 
 .format-ghost {
@@ -134,7 +143,7 @@ details > p {
     background: -o-linear-gradient(180deg, #fbfcfe 0%, #7275c2 100%);
     background: linear-gradient(180deg, #fbfcfe 0%, #7275c2 100%);
     background-color: #7275c2;
-    color: #2c2c2c
+    color: var(--font-dark)
 }
 
 .format-grass {
@@ -144,7 +153,7 @@ details > p {
     background: -o-linear-gradient(180deg, #d1ddae 0%, #3a7927 100%);
     background: linear-gradient(180deg, #d1ddae 0%, #3a7927 100%);
     background-color: #3a7927;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-ground {
@@ -154,7 +163,7 @@ details > p {
     background: -o-linear-gradient(180deg, #eed00e 0%, #6d6023 100%);
     background: linear-gradient(180deg, #eed00e 0%, #6d6023 100%);
     background-color: #6d6023;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-ice {
@@ -164,7 +173,7 @@ details > p {
     background: -o-linear-gradient(180deg, #fdffff 0%, #bfedfb 100%);
     background: linear-gradient(180deg, #fdffff 0%, #bfedfb 100%);
     background-color: #bfedfb;
-    color: #2c2c2c
+    color: var(--font-dark)
 }
 
 .format-normal {
@@ -174,7 +183,7 @@ details > p {
     background: -o-linear-gradient(180deg, #f1f2b8 0%, #dc93c0 100%);
     background: linear-gradient(180deg, #f1f2b8 0%, #dc93c0 100%);
     background-color: #f1f2b8;
-    color: #2c2c2c
+    color: var(--font-dark)
 }
 
 .format-poison {
@@ -184,7 +193,7 @@ details > p {
     background: -o-linear-gradient(180deg, #c2acc8 00%, #5d3667 100%);
     background: linear-gradient(180deg, #c2acc8 00%, #5d3667 100%);
     background-color: #5d3667;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-psychic {
@@ -194,7 +203,7 @@ details > p {
     background: -o-linear-gradient(180deg, #ff81ca 0%, #cb2987 100%);
     background: linear-gradient(180deg, #ff81ca 0%, #cb2987 100%);
     background-color: #cb2987;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-rock {
@@ -204,7 +213,7 @@ details > p {
     background: -o-linear-gradient(180deg, #b3a090 0%, #786d6b 100%);
     background: linear-gradient(180deg, #b3a090 0%, #786d6b 100%);
     background-color: #786d6b;
-    color: #fff
+    color: var(--font-light)
 }
 
 .format-steel {
@@ -214,7 +223,7 @@ details > p {
     background: -o-linear-gradient(180deg, #dae1e1 0%, #7e9090 100%);
     background: linear-gradient(180deg, #dae1e1 0%, #7e9090 100%);
     background-color: #7e9090;
-    color: #2c2c2c
+    color: var(--font-dark)
 }
 
 .format-water {
@@ -224,7 +233,7 @@ details > p {
     background: -o-linear-gradient(180deg, #b4e4f1 0%, #0985c8 100%);
     background: linear-gradient(180deg, #b4e4f1 0%, #0985c8 100%);
     background-color: #0985c8;
-    color: #fff
+    color: var(--font-light)
 }
 
 .sinTipo {
