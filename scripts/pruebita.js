@@ -70,6 +70,7 @@ function cambiarVisibilidad() {
     document.getElementById('tarjeta').style.display = 'block';
 }
 
+/* traducción al español, ya que la API lo pasa en inglés */
 function cambiarTipo (tipito) {
     switch  (tipito) {
         case 'ghost':
@@ -130,6 +131,7 @@ function cambiarTipo (tipito) {
     } return tipito;
 }
 
+/* asignar el estilo del fondo de cada tipo */
 function cambiarEstilo (stylex) {
     switch  (stylex) {
         case 'ghost':

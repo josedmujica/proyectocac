@@ -1,10 +1,52 @@
-/* ACÁ VAN LOS ESTILOS QUE CORRESPONDEN A LOS COLORES DE FONDO Y LETRAS DE LOS TIPOS*/
+* {
+    --font-family: 'Source Sans Pro', sans-serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --blanco: #FFFFFF;
+    --color1: #5A2AA2;
+    --color2: #7331CB;
+    --color3: #A47DFF;
+    --color4: #F3A806;
+    --color5: #EA9406;
+}
+
 
 * {
-    text-align: center;
+    /* text-align: center; */
     justify-content: center;
     vertical-align: middle;
 }
+
+details {
+    text-align: left;
+    justify-content: left;
+
+}
+
+summary {
+    cursor: pointer;
+    outline: none;
+}
+
+::marker {
+    color: var(--color1);
+}
+
+details > p {
+    padding: 0.5em 0.5em;
+    background: #F3A806;
+    border-radius: 5px;
+}
+
+.cTipo, #numero, #name, #tipos, #imagen, #contImagen, #hoverInfo {
+    text-align: center;
+}
+
+/* ACÁ VAN LOS ESTILOS QUE CORRESPONDEN A LOS COLORES DE FONDO Y LETRAS DE LOS TIPOS*/
+
 .format-bug {
     background: -webkit-linear-gradient(180deg, #fdea9a 0%, #61ca1c 100%);
     background: -ms-linear-gradient(180deg, #fdea9a 0%, #61ca1c 100%);
@@ -46,11 +88,11 @@
 }
 
 .format-fairy {
-    background: -webkit-linear-gradient(180deg, #ffdbf4 0%, #e39cce 100%);
-    background: -ms-linear-gradient(180deg, #ffdbf4 0%, #e39cce 100%);
-    background: -moz-linear-gradient(180deg, #ffdbf4 0%, #e39cce 100%);
-    background: -o-linear-gradient(180deg, #ffdbf4 0%, #e39cce 100%);
-    background: linear-gradient(180deg, #ffdbf4 0%, #e39cce 100%);
+    background: -webkit-linear-gradient(180deg, #fff4fc 0%, #e39cce 100%);
+    background: -ms-linear-gradient(180deg, #fff4fc 0%, #e39cce 100%);
+    background: -moz-linear-gradient(180deg, #fff4fc 0%, #e39cce 100%);
+    background: -o-linear-gradient(180deg, #fff4fc 0%, #e39cce 100%);
+    background: linear-gradient(180deg, #fff4fc 0%, #e39cce 100%);
     background-color: #e39cce;
     color: #2c2c2c
 }
