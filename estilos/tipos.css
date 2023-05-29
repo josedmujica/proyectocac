@@ -1,6 +1,7 @@
 * {
     text-align: center;
     justify-content: center;
+    vertical-align: middle;
 }
 .format-bug {
     background: -webkit-linear-gradient(180deg, #fdea9a 0%, #61ca1c 100%);
