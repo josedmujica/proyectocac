@@ -1,11 +1,103 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap'); */
 
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 12px;
+/* declaración de variables para que sea más fácil modificar y darle un estilo a todo el sitio*/
+* {
+    --font-family: 'Source Sans Pro', sans-serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --blanco: #FFFFFF;
+    --color1: #5A2AA2;
+    --color2: #7331CB;
+    --color3: #A47DFF;
+    --color4: #F3A806;
+    --color5: #EA9406;
 }
 
-p {
-    font-size: 16px;
+html {
+    scroll-behavior: smooth;
+}
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+a:hover {
+    color: var(--color2);
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+
+/* ESTILOS DE LA BARRA DE NAVEGACIÓN */
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--color4);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    /* offset-x | offset-y | blur-radius | color */
+}
+
+nav h1 {
+    color: var(--color1);
+}
+
+nav a {
+    color: var(--color5);
+    transition: var(--transicion);
+}
+
+nav a:hover {
+    color: var(--color1);
+    border-bottom: 2px solid var(--valor-secundario);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: var(--negrita);
+}
+
+/* ESTILO MENÚ HAMBURGUESA */
+.menu-hamburguesa {
+    color: var(--color1);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+
+iframe {
+    border: transparent;
+    width: 100px; 
+    height: 200px;
+    position: absolute;
+    right: 30px;
 }
