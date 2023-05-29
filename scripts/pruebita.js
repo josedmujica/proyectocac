@@ -2,11 +2,7 @@ const apiButton = document.getElementById('apiButton');
 const apiData = document.getElementById('apiData');
 const numero = document.getElementById('numero');
 const nombre = document.getElementById('name');
-const base_experience = document.getElementById('base_experience');
-// const tipos = document.querySelectorAll('types');
-// const imagen = document.createElement('img');
 const shiny = document.createElement('shiny');
-// const tipos = document.createElement('tipo1','tipo2');
 const tipos = document.getElementById('tipos');
 const tipo1 = document.getElementById('tipo1');
 const tipo2 = document.getElementById('tipo2');
@@ -16,60 +12,38 @@ let tiposs = new Array(2);
 imagen.src = "placeholder.png";
 let original = imagen.src;
 
-
 function crearPokemon() {
     let numerito = Math.floor(Math.random() * 1008) + 1;
-    console.log(numerito);
-    // let tipo1 = "";
-    // let tipo2 = "";
-    // let tipos = "";
+    // console.log(numerito);
+
     fetch('https://pokeapi.co/api/v2/pokemon/'.concat(numerito))
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-            // imagen.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".concat(numerito, ".png");
+            // console.log(data);
             imagen.src = data.sprites.other["official-artwork"].front_default;
             original = imagen.src;
-            // shiny.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/".concat(numerito, ".png");
             shiny.src = data.sprites.other["official-artwork"].front_shiny;
-            
-            // imagen.alt.innerHTML = nombre;
-
             imagen.width = "180";
-            // document.body.div.appendChild(imagen);
 
-            // id.innerText = `ID: ${JSON.stringify(data.id)}`;
             numero.innerText = `#${data.id.toString().padStart(3,0)}`;
 
             nombre.innerText = `${JSON.stringify(data.name)}`;
             nombre.innerText = nombre.innerText.replaceAll('"', '');
             nombre.innerText = nombre.innerText[0].toUpperCase() + nombre.innerText.slice(1)
-            // imagen.setAttribute("alt", nombre.innerText);
-            // nombre.innerText = "Nombre: ".concat(nombre.innerText);
-
-            // base_experience.innerText = `Experiencia Base: ${JSON.stringify(data.base_experience)}`;
             
+            cambiarVisibilidad() /* muestra la tarjeta */
+
             if (data.types.length == 1) {
                 tiposs.innerText = [data.types[0].type.name.replaceAll('"', ''), ""];
                 tipo1.innerText = cambiarTipo(tiposs.innerText[0]);   // traduzco al español
                 formatoTipo1.className = cambiarEstilo(tiposs.innerText[0]);
-                // tipo1.style.backgroundColor = cambiarEstilo(tiposs.innerText[0]);
-                // tipos.innerText = "Tipo/s: ".concat(cambiarTipo(tiposs.innerText[0]));
                 tipo2.innerText = "";
                 formatoTipo2.className = "sinTipo";
             } else {
                 tiposs.innerText = [data.types[0].type.name.replaceAll('"', ''), data.types[1].type.name.replaceAll('"', '')];
-                // tipos.innerText = "Tipo/s: ".concat(cambiarTipo(tiposs.innerText[0]), "/", cambiarTipo(tiposs.innerText[1]));
                 tipo1.innerText = cambiarTipo(tiposs.innerText[0]);  // traduzco al español
-                // tipo1.style = cambiarEstilo (tiposs.innerText[0]);
-                // formatoTipo1.className = "format-ground";
-                // console.log("antes:", formatoTipo1);
                 formatoTipo1.className = cambiarEstilo(tiposs.innerText[0]);
-                // console.log(tiposs.innerText[0]);
-                // formatoTipo1.innerHTML = "format-dragon";
                 tipo2.innerText = cambiarTipo(tiposs.innerText[1]);  // traduzco al español
-                // tipo2.style = cambiarEstilo(tiposs.innerText[1]);
-                // tipo2.style.fontSize = "50px";      // cambia el estilo según el tipo
                 formatoTipo2.className = cambiarEstilo(tiposs.innerText[1]);
             }
             // console.log(tiposs.innerText);
@@ -91,6 +65,10 @@ function crearPokemon() {
 }
 
 apiButton.addEventListener('click', crearPokemon)
+
+function cambiarVisibilidad() {
+    document.getElementById('tarjeta').style.display = 'block';
+}
 
 function cambiarTipo (tipito) {
     switch  (tipito) {
@@ -151,7 +129,6 @@ function cambiarTipo (tipito) {
 
     } return tipito;
 }
-
 
 function cambiarEstilo (stylex) {
     switch  (stylex) {
@@ -214,47 +191,3 @@ function cambiarEstilo (stylex) {
             break;
     } return stylex;
 }
-
-
-// const mostrarMensajito = document.getElementById('mostrarMensajito');
-// mostrarMensajito.addEventListener('click', mensajitu);
-// function mensajitu() {
-//     const h1 = document.createElement("h1")             //Creamos el <h1>
-//     const textNode = document.createTextNode("¡Hola!")  //Creamos el texto
-//     h1.appendChild(textNode)                            //Colocamos el texto como hijo del <h1>
-//     document.body.appendChild(h1)                       //Y ponemos el <h1> dentro del <body>
-//     const div1 = document.querySelector("div")      // <div></div>
-//     div1.textContent = "¡Hola a todos!"             // <div>Hola a todos</div>
-//     div1.textContent
-//     console.log(div1.textContent)                   // "Hola a todos"
-//     const div2 = document.querySelectorAll(".info")    // <div class="info"></div>
-//     for (let i in div2) {
-//         div2[i].innerHTML = "<strong>Importante</strong>";  // Interpreta el HTML
-//         div2[i].innerHTML;                                  // "<strong>Importante</strong>"
-//         div2[i].textContent;                                // "Importante
-//         console.log(div2[i].innerHTML);
-//         console.log(div2[i].textContent);
-//     }
-// }
-
-
-// window.pokemonUI.dictionary.type = {
-//     "ghost": "Fantasma",
-//     "dark": "Siniestro",
-//     "electric": "Eléctrico",
-//     "normal": "Normal",
-//     "fire": "Fuego",
-//     "psychic": "Psíquico",
-//     "flying": "Volador",
-//     "steel": "Acero",
-//     "poison": "Veneno",
-//     "dragon": "Dragón",
-//     "water": "Agua",
-//     "ice": "Hielo",
-//     "rock": "Roca",
-//     "fighting": "Lucha",
-//     "grass": "Planta",
-//     "bug": "Bicho",
-//     "ground": "Tierra",
-//     "fairy": "Hada",
-// };

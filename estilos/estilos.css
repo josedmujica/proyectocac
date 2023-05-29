@@ -73,6 +73,7 @@ h1 {
     flex-shrink: 2; */
     /* text-align: center; */
     /* justify-content: center; */
+    display: none;
     width: 400px;
     border: 5px solid cornflowerblue;
     background-color: rgb(235, 231, 208);
