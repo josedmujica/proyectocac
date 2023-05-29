@@ -37,25 +37,8 @@
     color: #303030;
 }
 
-.boton, #b1 {
-    background-color: coral;
-}
-
-.nuevaClase {
-    border-bottom: 2px solid red;
-    background: coral;
-    margin-top: 10px;
-}
-
-
-.nombre {
-    font-size: 50px;
-    text-transform:capitalize;
-}
-
 h1 {
     font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color: #00108b;
     border-bottom: 2px solid red;
@@ -122,6 +105,8 @@ img:hover {
     font-size: 30px;
     font-weight: bold;
     margin: 10px 0;
+    text-transform: uppercase;
+
 }
 
 #tipos {
@@ -130,6 +115,8 @@ img:hover {
     font-size: 20px;
     font-weight: bold;
     margin: 10px;
+    text-transform: uppercase;
+
 }
 
 #hoverInfo {
