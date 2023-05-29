@@ -23,6 +23,10 @@
     --color5: #EA9406;
 }
 
+* {
+    font-family: var(--font-family);
+}
+
 .boton, #b1,#b2,#b3,#text {
     color: white;
     border-radius: 3px;
